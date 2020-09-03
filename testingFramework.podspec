@@ -3,6 +3,7 @@ Pod::Spec.new do |s|
 
   s.name         = "testingFramework"
   s.version      = "0.0.1"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.summary  = 'A delightful sample framework for Apple platforms.'
   s.author             = { "sandi" => "sandy.spyware@gmail.com" }
 
@@ -14,6 +15,6 @@ Pod::Spec.new do |s|
   s.source_files = 'testingFramework/testingFramework.h'
 
   s.subspec 'Helpers' do |ss|
-    ss.source_files = 'testingFramework/UserDefaults.{swift}'
+    ss.source_files = 'testingFramework/UserDefaults.swift'
   end
 end

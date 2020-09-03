@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		27EE4EDB2500B86C0047B1C2 /* testingFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 27EE4ED92500B86C0047B1C2 /* testingFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27EE4EE22500BBEF0047B1C2 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE4EE12500BBEF0047B1C2 /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27EE4ED62500B86C0047B1C2 /* testingFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = testingFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27EE4ED92500B86C0047B1C2 /* testingFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testingFramework.h; sourceTree = "<group>"; };
 		27EE4EDA2500B86C0047B1C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27EE4EE12500BBEF0047B1C2 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,9 +49,18 @@
 			isa = PBXGroup;
 			children = (
 				27EE4ED92500B86C0047B1C2 /* testingFramework.h */,
+				27EE4EE32500BC3A0047B1C2 /* Helpers */,
 				27EE4EDA2500B86C0047B1C2 /* Info.plist */,
 			);
 			path = testingFramework;
+			sourceTree = "<group>";
+		};
+		27EE4EE32500BC3A0047B1C2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				27EE4EE12500BBEF0047B1C2 /* UserDefaults.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +106,7 @@
 				TargetAttributes = {
 					27EE4ED52500B86C0047B1C2 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
@@ -131,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27EE4EE22500BBEF0047B1C2 /* UserDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +273,7 @@
 		27EE4EDF2500B86C0047B1C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -277,6 +291,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -285,6 +300,7 @@
 		27EE4EE02500B86C0047B1C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
